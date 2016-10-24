@@ -2,6 +2,7 @@ group 'com.codekul.java'
 version '1.0.0.BUILD-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'idea'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -12,19 +13,16 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'com.obdobion:calendar:2.2.0'
-    //compile 'org.apache.geronimo.samples:jaxws-calculator:2.2.1'
-   // compile 'org.slieb:dependency-calculator:0.4'
-    //compile project(':samplelib')
+    compile group: 'com.rethinkdb', name: 'rethinkdb-driver', version: '2.3.3'
 }
 
 jar {
     manifest {
-        attributes 'Main-Class': 'com.codekul.javabrushup.Main'
+        attributes 'Main-Class': 'com.codekul.android.javabrushup.Main'
     }
 }
 
 task codeRun(type: JavaExec) {
     classpath sourceSets.main.runtimeClasspath
-    main = "com.codekul.javabrushup.Main"
+    main = 'com.codekul.android.javabrushup.Main'
 }

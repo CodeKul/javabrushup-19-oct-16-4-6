@@ -18,5 +18,7 @@ public class Main {
     public static void classesAndObjects(){
         Car car = new Car();
         car.showCarInfo();
+
+        Car.whatsVersion();
     }
 }

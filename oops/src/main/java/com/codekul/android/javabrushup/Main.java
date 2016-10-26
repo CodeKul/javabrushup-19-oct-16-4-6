@@ -3,10 +3,12 @@ package com.codekul.android.javabrushup;
 
 import com.codekul.android.javabrushup.abstractclassess.Jungle;
 import com.codekul.android.javabrushup.classesandobjects.Car;
+import com.codekul.android.javabrushup.exceptionhandling.Physics;
 import com.codekul.android.javabrushup.inheritance.Bird;
 import com.codekul.android.javabrushup.interfaces.Road;
 import com.codekul.android.javabrushup.staticdemo.Connection;
 import com.codekul.android.javabrushup.staticdemo.Db;
+import com.codekul.android.javabrushup.threading.Mobile;
 
 /**
  * Created by aniruddha on 21/10/16.
@@ -17,7 +19,7 @@ public class Main {
 
         System.out.println("Hello World");
 
-        interfaces();
+        threading();
     }
 
     public static void classesAndObjects(){
@@ -63,5 +65,21 @@ public class Main {
 
         Road road = new Road();
         road.travel();
+    }
+
+    public static void exceptionHandling(){
+        Physics physics = new Physics();
+
+        System.out.println("Accln is - " + physics.accelaration(0,0));
+
+        System.out.println("I m here ...");
+    }
+
+    public static void threading(){
+
+        Mobile mobile = new Mobile();
+        mobile.makeCall();
+        mobile.makeVideoCall();
+        mobile.capturePhoto();
     }
 }
